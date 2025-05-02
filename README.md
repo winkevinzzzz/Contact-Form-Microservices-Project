@@ -33,22 +33,20 @@ You can run this project either with Docker or manually using `npm`.
 ```bash
 git clone https://github.com/your-username/contact-microservices.git
 
-
 cd contact-microservices
-
-
+```
 2. Start all services
-bash
-Copy
-Edit
+```bash
 docker-compose up --build
+```
 3. Access the app
+```bash
 Frontend: http://localhost:3000
 
 Form API: http://localhost:3001
 
 Redis: used internally (port 6379)
-
+```
 🧑‍🔧 Option 2: Run Manually (Without Docker)
 Prerequisites
 Node.js (v16+)
@@ -57,26 +55,30 @@ Redis server running locally on localhost:6379
 
 1. Install dependencies
 In each subfolder:
-
+```bash
 👉 frontend
 
 cd frontend
 npm install
 npm start
+```
+```bash
 👉 form-api
 
 cd ../form-api
 npm install
 node index.js
 👉 processor
-
+```
+```bash
 cd ../processor
 npm install
 node index.js
 📬 API Endpoint
 POST /submit
 URL: http://localhost:3001/submit
-
+```
+```bash
 Body (JSON):
 
 {
@@ -87,6 +89,7 @@ Body (JSON):
 Response:
 
 { "status": "ok" }
+```
 ✅ What Happens After Submitting the Form?
 frontend sends form data to form-api
 
@@ -104,7 +107,7 @@ Express
 Redis
 
 Docker & Docker Compose
-```
+
 🙌 License
 MIT — free to use, modify, and distribute.
 
