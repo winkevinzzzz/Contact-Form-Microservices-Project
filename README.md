@@ -10,17 +10,14 @@ A simple microservices-based contact form system with:
 ---
 
 ## 📁 Folder Structure
-
+```bash
 contact-microservices/
 ├── docker-compose.yml
 ├── frontend/ # React contact form UI
 ├── form-api/ # Express API to receive and push to Redis
 ├── processor/ # Service to consume messages from Redis
 └── .gitignore
-
-yaml
-Copy
-Edit
+```
 
 ---
 
@@ -35,7 +32,11 @@ You can run this project either with Docker or manually using `npm`.
 ### 1. Clone the project
 ```bash
 git clone https://github.com/your-username/contact-microservices.git
+
+
 cd contact-microservices
+
+
 2. Start all services
 bash
 Copy
@@ -58,23 +59,17 @@ Redis server running locally on localhost:6379
 In each subfolder:
 
 👉 frontend
-bash
-Copy
-Edit
+
 cd frontend
 npm install
 npm start
 👉 form-api
-bash
-Copy
-Edit
+
 cd ../form-api
 npm install
 node index.js
 👉 processor
-bash
-Copy
-Edit
+
 cd ../processor
 npm install
 node index.js
@@ -84,9 +79,6 @@ URL: http://localhost:3001/submit
 
 Body (JSON):
 
-json
-Copy
-Edit
 {
   "name": "John Doe",
   "email": "john@example.com",
@@ -94,9 +86,6 @@ Edit
 }
 Response:
 
-json
-Copy
-Edit
 { "status": "ok" }
 ✅ What Happens After Submitting the Form?
 frontend sends form data to form-api
@@ -115,13 +104,10 @@ Express
 Redis
 
 Docker & Docker Compose
-
+```
 🙌 License
 MIT — free to use, modify, and distribute.
 
-yaml
-Copy
-Edit
 
 ---
 
