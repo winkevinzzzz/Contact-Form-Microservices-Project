@@ -114,5 +114,3 @@ MIT — free to use, modify, and distribute.
 
 
 ---
-
-Would you like me to push this into a real GitHub repository template or prepare a `.zip` with everything inside?
