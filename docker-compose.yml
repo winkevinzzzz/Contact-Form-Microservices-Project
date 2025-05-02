@@ -1,0 +1,27 @@
+# docker-compose.yml
+# yaml-language-server: $schema=https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json
+version: '3.8'
+services:
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+
+  form-api:
+    build: ./form-api
+    ports:
+      - "3001:3001"
+    environment:
+      - REDIS_URL=redis://redis:6379
+
+  processor:
+    build: ./processor
+    environment:
+      - REDIS_URL=redis://redis:6379
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+
+      
