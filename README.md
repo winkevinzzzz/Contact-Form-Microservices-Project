@@ -90,25 +90,26 @@ Response:
 
 { "status": "ok" }
 ```
-✅ What Happens After Submitting the Form?
+---
+## ✅ What Happens After Submitting the Form?
+```bash
 frontend sends form data to form-api
 
 form-api pushes the message to Redis queue
 
 processor consumes the message and logs it to terminal
+```
 
-🔧 Built With
+## 🔧 Built With
+```bash
 React
-
 Node.js
-
 Express
-
 Redis
-
 Docker & Docker Compose
+```
 
-🙌 License
+## 🙌 License
 MIT — free to use, modify, and distribute.
 
 
